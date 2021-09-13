@@ -1,10 +1,45 @@
+/* Mode Toggle */
+.switch-toggle {
+    float: left;
+    background: #242729;
+}
+.switch-toggle input {
+    position: absolute;
+    opacity: 0;
+}
+.switch-toggle input + label {
+    padding: 7px;
+    float:left;
+    color: #fff;
+    cursor: pointer;
+}
+.switch-toggle input:checked + label {
+    background: rgb(40, 88, 131);
+}
+/* End of Mode Toggle */
+
+html{
+    min-height: 100%;
+}
+
+/* Normal Mode */
 body{
+    min-height: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     background-color:rgb(215, 237, 255);
     margin: 0;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    background-color: rgba(21, 39, 53, 0.4);;
+    margin: 0;
+    padding: 10px;
 }
 
 header{
@@ -18,13 +53,15 @@ header{
 
 footer{
     width: 100%;
+    height: 100px;
     bottom: 0;
+    flex-shrink: 0;
     position: fixed;
     text-align: center;
     color: rgb(21, 39, 53);
     background-color: aliceblue;
     margin: 0;
-    padding: 10px;
+    padding: 2px;
 }
 
 .section{
@@ -48,7 +85,6 @@ footer{
 }
 
 .contact{
-    color: rgb(21, 39, 53);;
     width: 30px;
     margin-left: 5px;
     margin-right: 5px;
@@ -70,3 +106,143 @@ footer{
     margin-right: 20px;
     border-radius: 50%;
 }
+/* End of Normal Mode */
+
+/* Dark Mode */
+body.dark{
+    min-height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: -webkit-radial-gradient(bottom left, rgba(1, 17, 47, 1.0), rgba(27, 27, 27, 1.0));
+    background: -moz-radial-gradient(bottom left, rgba(1, 17, 47, 1.0), rgba(27, 27, 27, 1.0));
+    background: radial-gradient(to top right, rgba(1, 17, 47, 1.0), rgba(27, 27, 27, 1.0));
+    margin: 0;
+}
+
+header.dark{
+    display: flex;
+    align-items: center;
+    color: rgb(174, 178, 184);
+    background: rgba(0, 0, 0, 1.0);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1.0), rgba(1, 58, 102, 0.5));
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 1.0), rgba(1, 58, 102, 0.5));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), rgba(1, 58, 102, 0.5));
+    margin: 0;
+    padding: 30px;
+}
+
+nav.dark{
+    display: flex;
+    align-items: center;
+    color: rgb(174, 178, 184);
+    background-color: rgba(1, 58, 102, 0.5);
+    margin: 0;
+    padding: 10px;
+}
+
+footer.dark{
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    flex-shrink: 0;
+    position: fixed;
+    text-align: center;
+    color: rgb(174, 178, 184);
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+    padding: 10px;
+}
+
+.section.dark{
+    min-width: 310px;
+    max-width: 500px;
+    color:rgb(174, 178, 184);
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 20px rgba(1, 58, 102, 0.1);
+    margin: 10px;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.list_title.dark{
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color:rgba(0, 0, 0);
+    background-color: rgb(174, 178, 184);;
+    margin: 0;
+    padding: 10px;
+}
+/* End of Dark Mode */
+
+/* Light Mode */
+body.light{
+    min-height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: rgba(43, 43, 43, 0.74);
+    background: -webkit-radial-gradient(bottom right, rgba(187, 211, 255, 1.0), rgba(255, 255, 255, 1.0));
+    background: -moz-radial-gradient(bottom right, rgba(187, 211, 255, 1.0), rgba(255, 255, 255, 1.0));
+    background: radial-gradient(to top left, rgba(187, 211, 255, 1.0), rgba(255, 255, 255, 1.0));
+    margin: 0;
+}
+
+header.light{
+    display: flex;
+    align-items: center;
+    color: rgb(49, 95, 165);
+    background: rgba(166, 198, 255, 1.0);
+    background: -webkit-linear-gradient(top, rgba(166, 198, 255, 1.0), rgba(255, 255, 255, 0.2));
+    background: -moz-linear-gradient(top, rgba(166, 198, 255, 1.0), rgba(255, 255, 255, 0.2));
+    background: linear-gradient(to bottom, rgba(166, 198, 255, 1.0), rgba(255, 255, 255, 0.2));
+    margin: 0;
+    padding: 30px;
+}
+
+nav.light{
+    display: flex;
+    align-items: center;
+    color: rgb(49, 95, 165);
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0;
+    padding: 10px;
+}
+
+footer.light{
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    flex-shrink: 0;
+    position: fixed;
+    text-align: center;
+    color: rgb(49, 95, 165);
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    padding: 2px;
+}
+
+.section.light{
+    min-width: 310px;
+    max-width: 500px;
+    color:rgb(49, 95, 165);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 10px 20px rgba(49, 95, 165, 0.1);
+    margin: 10px;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.list_title.light{
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color:rgba(255, 255, 255);
+    background-color: rgb(49, 95, 165);;
+    margin: 0;
+    padding: 10px;
+}
+/* End of Light Mode */

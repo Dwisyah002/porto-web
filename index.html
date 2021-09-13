@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="script/main.js" async></script>
     <title> Portfolio </title>
 </head>
 
@@ -17,6 +18,19 @@
             <p> Undergraduate Student at Electrical Power Engineering, Institut Teknologi Bandung </p>
         </div>
     </header>
+
+    <nav>
+        <div class="switch-toggle switch-3 switch-candy">
+            <input id="dark" name="state-d" type="radio" checked="" onclick="toDarkMode()" />
+            <label for="dark">Dark</label>
+         
+            <input id="normal" name="state-d" type="radio" checked="checked" onclick="toNormalMode()" />
+            <label for="normal">Normal</label>
+          
+            <input id="light" name="state-d" type="radio" onclick="toLightMode()" />
+            <label for="light">Light</label>
+        </div>
+    </nav>
 
     <div id="profile">
         <div class="section">
